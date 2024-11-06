@@ -1,0 +1,116 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+  
+/* Navbar Styles */
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.navbar-logo .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+  
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+  
+.navbar-links li {
+    display: inline;
+}
+  
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-right: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+  
+.navbar-links a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+  
+/* Homepage Styles */
+.homepage {
+    display: flex;
+    height: 90vh;
+    background-image: url('https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    align-items: center;
+}
+
+/* Overlay for Darker Background */
+.homepage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+}
+
+/* Centered Content on the Left */
+.homepage-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    padding: 20px;
+    max-width: 400px; /* Optional: limit width for better readability */
+}
+
+.homepage-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.btn-main {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-left: 130px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.btn-main:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    .homepage-content h1 {
+        font-size: 32px;
+    }
+}

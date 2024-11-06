@@ -1,0 +1,90 @@
+/* payment-status-page styles */
+.payment-status-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .payment-status-page h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    animation: slideDown 0.6s ease-out;
+  }
+  
+  .payment-status-page p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .payment-status-page button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: bounceIn 0.5s ease-out;
+  }
+  
+  .payment-status-page button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .payment-status-page.success {
+    background-color: #e8f5e9;
+    color: #388e3c;
+  }
+  
+  .payment-status-page.failed {
+    background-color: #ffebee;
+    color: #d32f2f;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
